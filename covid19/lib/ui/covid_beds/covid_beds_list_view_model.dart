@@ -111,24 +111,22 @@ class HospitalBedsViewModel extends BaseViewModel {
     var messageText = """
     ${hospital["Name"]}
 
-    Total Vacant Beds: ${bed["TotalVaccantBeds"]}
-    Vacant ICU Beds: ${bed["VaccantICUBeds"]}
-    Vaccant Oxygen Beds: ${bed["VaccantO2Beds"]}
-    Vacant Normal Beds: ${bed["VaccantNonO2Beds"]}
+Vacant ICU Beds: ${bed["VaccantICUBeds"]}
+Vaccant Oxygen Beds: ${bed["VaccantO2Beds"]}
+Vacant Normal Beds: ${bed["VaccantNonO2Beds"]}
 
-    Facility: ${hospital["FacilityType"] ?? "-"}
+Facility: ${hospital["FacilityType"] ?? "-"}
 
-    Landline: ${hospital["Landline"] ?? "-"}
-    MobileNumber: ${hospital["MobileNumber"] ?? "-"}
-    PrimaryContactPerson: ${hospital["PrimaryContactPerson"] ?? "-"}
+Contact:
+Landline: ${hospital["Landline"] ?? "-"}
+MobileNumber: ${hospital["MobileNumber"] ?? "-"}
+PrimaryContactPerson: ${hospital["PrimaryContactPerson"] ?? "-"}
+$contactDetailsText
 
-    Contact:
-    $contactDetailsText
-
-    ${hospital["AddressDetail"]["Line1"] ?? ""}
-    ${hospital["AddressDetail"]["Line2"] ?? ""}
-    ${hospital["AddressDetail"]["Line3"] ?? ""}
-    http://maps.google.com/maps?daddr=${hospital["Latitude"]},${hospital["Latitude"]}'
+${hospital["AddressDetail"]["Line1"] ?? ""}
+${hospital["AddressDetail"]["Line2"] ?? ""}
+${hospital["AddressDetail"]["Line3"] ?? ""}
+http://maps.google.com/maps?daddr=${hospital["Latitude"]},${hospital["Latitude"]}'
 
     """;
     Share.share(messageText);
