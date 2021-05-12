@@ -5,6 +5,7 @@ import 'package:share/share.dart';
 import 'package:stacked/stacked.dart';
 import 'package:stacked_services/stacked_services.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:covid19/utils/extensions.dart';
 
 class HospitalBedsViewModel extends BaseViewModel {
   final _tnCovidBedsService = locator<TNCovidBedsService>();
@@ -28,8 +29,7 @@ class HospitalBedsViewModel extends BaseViewModel {
       DateTime.fromMillisecondsSinceEpoch(int.parse(
                   hospital["CovidBedDetails"]["LastUpdatedTime"].toString()) *
               1000)
-          .toIso8601String()
-          .replaceAll("T", " ");
+          .getDateDifference();
 
   get req {
     var severitySelections = <String>[];
