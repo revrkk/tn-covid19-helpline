@@ -1,6 +1,6 @@
 # covid19
 
-A new Flutter project.
+A simple Comand for the flutter covid app
 
 ## Getting Started
 
